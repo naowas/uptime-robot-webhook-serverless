@@ -1,0 +1,6 @@
+{
+    "title": "*Uptime Alert*",
+    "name": "**monitorFriendlyName**'s status just got updated!",
+    "url": "*URL:* *monitorURL*",
+    "value": "*Status:* *alertTypeFriendlyName* \n*Details:* *alertDetails*\n*Duration:* *alertDuration*"
+}
