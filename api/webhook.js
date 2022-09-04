@@ -4,7 +4,7 @@ process.env.NTBA_FIX_319 = 'test';
 
 // Require our Telegram helper package
 const TelegramBot = require('node-telegram-bot-api');
-const MomentJS = require('moment')
+// const MomentJS = require('moment')
 
 // Export as an asynchronous function
 // We'll wait until we've responded to the user
@@ -21,9 +21,9 @@ module.exports = async (request, response) => {
         let durationHumanDiff = '';
         // Ensure that this is a message being sent
         if (body.title) {
-            if (isNaN(body.duration) === false) {
-                const duration = MomentJS.duration(body.duration);
-                durationHumanDiff ='\n' + '*Duration:* '+duration.humanize();
+            if (body.duration) {
+                // const duration = MomentJS.duration(body.duration);
+                durationHumanDiff ='\n' + '*Duration:* '+body.duration;
             }
             // Send our new message back in Markdown
             // Will implemet ability to send to multiple ids at a time //
