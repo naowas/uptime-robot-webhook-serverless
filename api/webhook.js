@@ -21,7 +21,7 @@ module.exports = async (request, response) => {
         let durationHumanDiff = '';
         // Ensure that this is a message being sent
         if (body.title) {
-            if (body.duration) {
+            if (!body.duration.includes('alertFriendlyDuration')) {
                 // const duration = MomentJS.duration(body.duration);
                 durationHumanDiff ='\n' + '*Duration:* '+body.duration;
             }
