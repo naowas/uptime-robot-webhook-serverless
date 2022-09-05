@@ -23,7 +23,7 @@ module.exports = async (request, response) => {
         if (body.title) {
             if (!body.duration.includes('alertFriendlyDuration')) {
                 // const duration = MomentJS.duration(body.duration);
-                durationHumanDiff ='\n' + '*Duration:* '+body.duration;
+                durationHumanDiff ='\n' + '*Down Time:* '+body.duration;
             }
             // Send our new message back in Markdown
             // Will implemet ability to send to multiple ids at a time //
